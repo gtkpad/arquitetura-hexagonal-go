@@ -44,6 +44,7 @@ func (p *ProductDb) create(product application.IProduct) (application.IProduct, 
 	if err != nil {
 		return nil, err
 	}
+
 	_, err = stmt.Exec(
 		product.GetID(), 
 		product.GetName(), 
